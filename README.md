@@ -1,6 +1,10 @@
+<p align="center">
+<img src="https://i.imgur.com/r8S0B8F.png" alt="vpn diagram"/>
+</p>
+
 # Azure Virtual Machine and VPN Lab
 
-This tutorial walks you through setting up a virtual machine in Microsoft Azure, testing VPN connections, and observing the changes in IP addresses and website behavior.
+This tutorial walks you through setting up a virtual machine in Microsoft Azure, testing VPN connections, and observing the changes in IP addresses.
 
 ---
 
@@ -23,12 +27,16 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
    - Select **Azure Virtual Machine**.
    - Fill out the following:
      - **Name**: `MyWindowsVM`
-     - **Region**: Choose a region in a different geographic location or country from your current location.
-     - **Image**: Windows 10 Pro.
-     - **Size**: Select a size that fits the free tier if applicable.
+     - **Region**: Choose a region close to your geographic location or country from your current location.
+     - **Image**: Windows 10 22H2.
+     - **Size**: Select a size that has at least 2vcpus, and 8GiB memory.
      - **Administrator Username and Password**: Set your credentials.
-   - Ensure **Inbound Port Rules** allow RDP (Remote Desktop Protocol).
+   - Acknowledge licensing agreement & ensure **Inbound Port Rules** to allow RDP (Remote Desktop Protocol).
    - Click **Review + Create**, then **Create**.
+
+<p>
+<img src="https://i.imgur.com/n2JcKKS.png" height="80%" width="80%" alt="Lab 4"/>
+</p>
 
 4. **Log into the Virtual Machine**
    - After the VM is created, navigate to it in the Azure Portal.
@@ -37,6 +45,10 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
      - **Remote Desktop Address**: Enter the Public IP Address of the VM.
      - **Username and Password**: Use the credentials you created earlier.
    - Once connected, open a web browser on the VM.
+
+<p>
+<img src="https://i.imgur.com/9Xw84vn.png" height="80%" width="80%" alt="Lab 4"/>
+</p>
 
 5. **Check the VM's Public IP Address**
    - In the VM, browse to [WhatIsMyIPAddress](https://whatismyipaddress.com/).
@@ -59,20 +71,16 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
    - Log in using your ProtonVPN account credentials: [ProtonVPN Login](https://account.protonvpn.com/login).
 
 4. **Connect to a VPN Server**
-   - In the ProtonVPN client, choose a VPN server in a country different from both your actual computer's location and your VM's region (e.g., Japan).
+   - In the ProtonVPN client, choose a VPN server in a area different from your actual computer's location (Proton VPN requires payment to change countries).
    - Connect to the VPN server.
+
+<p>
+<img src="https://i.imgur.com/1zGrnNV.png" height="80%" width="80%" alt="Lab 4"/>
+</p>
 
 5. **Check the VPN's Public IP Address**
    - In the VM, browse to [WhatIsMyIPAddress](https://whatismyipaddress.com/).
    - Take note of the new IP address and save it in a text file.
-
-6. **Test Website Behavior**
-   - In the VM, browse to sites like:
-     - [Google](https://www.google.com)
-     - [Disney](https://www.disney.com)
-     - [Amazon](https://www.amazon.com)
-   - Observe if the language or URL changes based on the VPN server's location.
-   - Take notes on any differences.
 
 ---
 
@@ -80,3 +88,14 @@ This tutorial walks you through setting up a virtual machine in Microsoft Azure,
 
 - Save all IP addresses and observations in a text file for documentation purposes.
 - Compare the behavior of websites and the changes in IP addresses to understand the effects of geographic location and VPN usage.
+- From this lab, here are my documented IP addresses & their changes:
+
+<p>
+<img src="https://i.imgur.com/WuUhDpF.png" height="80%" width="80%" alt="Lab 4"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/cwnCfOU.png" height="80%" width="80%" alt="Lab 4"/>
+</p>
+
+---
